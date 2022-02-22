@@ -1,0 +1,130 @@
+.sidebar-nav ul a {
+  padding: 10px 20px;
+  color: #aaa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-nav-item {
+  padding-left: 5px;
+}
+
+.sidebar-nav-item-icon {
+  width: 50px;
+  color: #31bdd2;
+}
+
+.sidebar {
+    display: block;
+    float: left;
+}
+
+.sidebar-nav {
+    /*background-color: #F6F6F6;*/
+}
+
+#menu_social {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#menu_social li {
+    margin-top: 4px;
+    width: 100%;
+    /* border-bottom: 1px dashed #cccccc; */
+}
+#menu_social li ul li {
+    margin-top: 0px;
+}
+
+li.sub {
+    float: left;
+}
+
+#menu_social li a {
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+    /* background-color: #7e8c7e; */
+    border: 10px solid rgb(93, 54, 37);
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    /* font-family: 'Candara', 'Bookman Old Style', 'Open Sans', sans-serif; */
+    font-weight: normal;
+}
+ 
+#menu_social li a:hover {
+    background-color: #202125;
+    color: #8cd231;
+}
+#menu_social li a.active {
+    background-color: #030304;
+    color: #f9ffff;
+}
+ 
+#menu_social li ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+  
+#menu_social li ul li a {
+    font-size: 13px;
+    padding: 10px 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0px;
+    font-family: 'Candara', 'Bookman Old Style', 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+#menu_social li ul li a:hover,
+#menu_social li ul li a.active {
+    background: #202125;
+}
+
+#menu_social .arrow{float:right;line-height:1.42857}
+[dir=rtl]
+#menu_social .arrow{float:left}
+#menu_social .fa.arrow:before{content:"\f104"}
+#menu_social li.sub>a.active>.fa.arrow:before{content:"\f107"}
+
+
+
+#menu_profil {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#menu_profil li a {
+    display: block;
+    position: relative;
+    padding: 10px 20px;
+    background-color: #f3f4f3;
+    border: 1px solid rgba(51, 122, 183, 0.1);
+    text-decoration: none;
+    color: #00333e;
+}
+
+#menu_profil li a:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#menu_profil li a:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+ 
+#menu_profil li a:hover,
+#menu_profil li a.active {
+    background-color: #00ad45;
+    color: #fff;
+}

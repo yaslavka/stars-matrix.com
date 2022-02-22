@@ -1,0 +1,49 @@
+DirectoryIndex index.php
+RewriteEngine On
+AddDefaultCharset utf-8
+
+# Основной домен
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Главная
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^auth(/?)+$ index.php?menu=auth [L]
+RewriteRule ^registration(/?)+$ index.php?menu=registration [L]
+RewriteRule ^confirm/(.*)/(.*)(/?)+$ index.php?menu=confirm&login=$1&code=$2 [L]
+
+RewriteRule ^recovery(/?)+$ index.php?menu=recovery [L]
+RewriteRule ^recovery/(.*)/(.*)/(.*)(/?)+$ index.php?menu=recovery&login=$1&key=$2&code=$3 [L]
+RewriteRule ^rules(/?)+$ index.php?menu=rules [L]
+RewriteRule ^help(/?)+$ index.php?menu=help [L]
+RewriteRule ^news(/?)+$ index.php?menu=news [L]
+RewriteRule ^feedback(/?)+$ index.php?menu=feedback [L]
+RewriteRule ^development(/?)+$ index.php?menu=development [L]
+RewriteRule ^marketing(/?)+$ index.php?menu=marketing [L]
+RewriteRule ^marketings(/?)+$ index.php?menu=marketings [L]
+RewriteRule ^marketingb(/?)+$ index.php?menu=marketingb [L]
+RewriteRule ^marketingp(/?)+$ index.php?menu=marketingp [L]
+RewriteRule ^support(/?)+$ index.php?menu=support [L]
+RewriteRule ^faq(/?)+$ index.php?menu=faq [L]
+
+# Аккаунт
+RewriteRule ^activate(/?)+$ index.php?menu=account&sel=activate [L]
+RewriteRule ^profile(/?)+$ index.php?menu=account&sel=profile [L]
+RewriteRule ^profile/([a-z]+)(/?)+$ index.php?menu=account&sel=profile&submenu=$1 [L]
+RewriteRule ^partners(/?)+$ index.php?menu=account&sel=partners [L]
+RewriteRule ^partners/([a-z]+)(/?)+$ index.php?menu=account&sel=partners&submenu=$1 [L]
+RewriteRule ^orders(/?)+$ index.php?menu=account&sel=orders [L]
+RewriteRule ^orders/([a-z]+)(/?)+$ index.php?menu=account&sel=orders&submenu=$1 [L]
+RewriteRule ^orders/([a-z]+)/(.*)(/?)+$ index.php?menu=account&sel=orders&submenu=$1&matrixbuy=$2 [L]
+RewriteRule ^myorders(/?)+$ index.php?menu=account&sel=myorders [L]
+RewriteRule ^myorders/([a-z]+)(/?)+$ index.php?menu=account&sel=myorders&submenu=$1 [L]
+RewriteRule ^myorders/([a-z]+)/([0-9]+)(/?)+$ index.php?menu=account&sel=myorders&submenu=$1&uidd=$2 [L]
+RewriteRule ^cash(/?)+$ index.php?menu=account&sel=cash [L]
+RewriteRule ^cash/([a-z]+)(/?)+$ index.php?menu=account&sel=cash&submenu=$1 [L]
+RewriteRule ^info(/?)+$ index.php?menu=account&sel=info [L]
+RewriteRule ^info/([a-z]+)(/?)+$ index.php?menu=account&sel=info&submenu=$1 [L]
+
+RewriteRule ^successpay(/?)+$ index.php?menu=account&sel=successpay [QSA]
+RewriteRule ^errorpay(/?)+$ index.php?menu=account&sel=errorpay [L]
+
+RewriteRule ^logout(/?)+$ index.php?menu=account&sel=logout [L]
